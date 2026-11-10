@@ -19,9 +19,9 @@ function Stop-Share {
     Remove-Item $pidFile
   }
   Get-Process cloudflared -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
-  # cmd 아래에서 뜬 uvicorn(python)까지 정리: 8000 포트를 잡은 프로세스
-  Get-NetTCPConnection -LocalPort 8000 -State Listen -ErrorAction SilentlyContinue |
-    ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }
+  # cmd 아래에서 뜬 uv·uvicorn·python 까지 정리 (포트 소유 PID 가 0 으로 보일 때가 있어 명령줄로 찾는다)
+  Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'uvicorn' -and $_.CommandLine -match 'app\.main:app' } |
+    ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
 }
 
 if ($Stop) { Stop-Share; "공유를 껐어요."; exit 0 }
@@ -29,9 +29,6 @@ if ($Stop) { Stop-Share; "공유를 껐어요."; exit 0 }
 $cf = (Get-Command cloudflared -ErrorAction SilentlyContinue).Source
 if (-not $cf) { $cf = "C:\Program Files (x86)\cloudflared\cloudflared.exe" }
 if (-not (Test-Path $cf)) { throw "cloudflared 가 없어요: winget install --id Cloudflare.cloudflared -e" }
-if (-not (Test-Path (Join-Path $root ".env")) -or -not (Select-String -Path (Join-Path $root ".env") -Pattern '^DEMO_PASSWORD=.+' -Quiet)) {
-  Write-Warning ".env 에 DEMO_PASSWORD 가 없어요. 누구나 들어와 영상을 만들 수 있으니(비용 발생) 비밀번호를 먼저 정하세요."
-}
 if (-not (Test-Path (Join-Path $root "frontend\dist\index.html"))) {
   Push-Location (Join-Path $root "frontend"); npm install --no-audit --no-fund; npm run build; Pop-Location
 }
@@ -72,4 +69,8 @@ if ($pids.Count) {
 if (-not $url) { throw "터널 주소를 받지 못했어요. 로그: $tunLog" }
 $url | Set-Content (Join-Path $logs "url.txt") -Encoding utf8
 "공개 주소: $url"
-"아이디: demo  /  비밀번호: .env 의 DEMO_PASSWORD"
+if (Select-String -Path (Join-Path $root ".env") -Pattern '^DEMO_PASSWORD=.+' -Quiet -ErrorAction SilentlyContinue) {
+  "로그인: 아이디 demo / 비밀번호는 .env 의 DEMO_PASSWORD"
+} else {
+  "로그인 없음 — 링크를 아는 누구나 영상을 만들 수 있어요 (하루 한도 DEMO_MAX_JOBS_PER_DAY)"
+}

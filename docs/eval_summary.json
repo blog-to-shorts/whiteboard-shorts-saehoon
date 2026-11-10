@@ -1,0 +1,111 @@
+{
+  "run": "20261110-0855-script",
+  "script": {
+    "v1": {
+      "n": 9,
+      "errors": 3,
+      "length_ok": 0.0,
+      "structure_ok": 1.0,
+      "format_violations": 11.111,
+      "grounded_rate": 0.437,
+      "est_seconds": 155.433,
+      "accuracy": 4.222,
+      "coverage": 3.556,
+      "structure": 4.111,
+      "naturalness": 3.889,
+      "visual_fit": 4.444,
+      "mean": 4.044,
+      "distortions": 1,
+      "gen_seconds": 60.233
+    },
+    "v2": {
+      "n": 9,
+      "errors": 6,
+      "length_ok": 1.0,
+      "structure_ok": 1.0,
+      "format_violations": 0.333,
+      "grounded_rate": 0.911,
+      "est_seconds": 50.111,
+      "accuracy": 4.222,
+      "coverage": 2.556,
+      "structure": 3.889,
+      "naturalness": 4.111,
+      "visual_fit": 3.556,
+      "mean": 3.667,
+      "distortions": 0.556,
+      "gen_seconds": 257.656
+    }
+  },
+  "samples": [
+    "cook-kimchi",
+    "econ-fomc",
+    "econ-rate",
+    "fin-isa",
+    "health-knee",
+    "it-python",
+    "law-jeonse",
+    "law-jeonse2",
+    "parent-sleep",
+    "pet-sep",
+    "review-cafe",
+    "sci-photo",
+    "self-pomo",
+    "tax-yearend",
+    "travel-jeju"
+  ],
+  "errors": [
+    "pet-sep/v2",
+    "self-pomo/v2",
+    "travel-jeju/v1",
+    "travel-jeju/v2",
+    "review-cafe/v1",
+    "review-cafe/v2",
+    "self-pomo/v1",
+    "law-jeonse/v2",
+    "law-jeonse2/v2"
+  ],
+  "images": [
+    {
+      "sample": "econ-rate",
+      "style": "marker_mono_v1",
+      "score": 0.71,
+      "cv_stroke": 0.233,
+      "text_area": 0.0101
+    },
+    {
+      "sample": "econ-rate",
+      "style": "marker_mono",
+      "score": 1.0,
+      "cv_stroke": 0.1,
+      "text_area": 0.0045
+    },
+    {
+      "sample": "econ-fomc",
+      "style": "marker_mono_v1",
+      "score": 0.71,
+      "cv_stroke": 0.172,
+      "text_area": 0.0712
+    },
+    {
+      "sample": "econ-fomc",
+      "style": "marker_mono",
+      "score": 0.86,
+      "cv_stroke": 0.056,
+      "text_area": 0.0056
+    },
+    {
+      "sample": "fin-isa",
+      "style": "marker_mono_v1",
+      "score": 0.86,
+      "cv_stroke": 0.144,
+      "text_area": 0.0179
+    },
+    {
+      "sample": "fin-isa",
+      "style": "marker_mono",
+      "score": 1.0,
+      "cv_stroke": 0.111,
+      "text_area": 0.003
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+[
+  {
+    "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+    "name": "Roger - Laid-Back, Casual, Resonant",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "classy",
+      "use_case": "conversational"
+    },
+    "stt": 0.896,
+    "stt_min": 0.812,
+    "chars_per_sec": 7.43,
+    "stt2": 0.966,
+    "stt2_min": 0.958,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요.",
+      "연말정산에서 신용카드 공제는 총급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요.",
+      "전세 계약 전에는 등기부등본으로 근저당이 있는지 꼭 확인하세요. 포종보험 가입이 되는지도 미리 알아보는 게 좋아요."
+    ]
+  },
+  {
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "name": "Sarah - Mature, Reassuring, Confident",
+    "labels": {
+      "gender": "female",
+      "accent": "american",
+      "language": "en",
+      "age": "young",
+      "descriptive": "professional",
+      "use_case": "entertainment_tv"
+    },
+    "stt": 0.906,
+    "stt_min": 0.812,
+    "chars_per_sec": 7.12,
+    "stt2": 0.981,
+    "stt2_min": 0.962,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총 급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요.",
+      "연말정산에서 신용카드 공제는 총급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요."
+    ]
+  },
+  {
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "name": "Laura - Enthusiast, Quirky Attitude",
+    "labels": {
+      "gender": "female",
+      "accent": "american",
+      "language": "en",
+      "age": "young",
+      "descriptive": "sassy",
+      "use_case": "social_media"
+    },
+    "stt": 0.906,
+    "stt_min": 0.812,
+    "chars_per_sec": 7.67,
+    "stt2": 0.981,
+    "stt2_min": 0.962,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총 급여의 이십오 퍼센트를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 삼십 퍼센트로 더 높아요.",
+      "연말정산에서 신용카드 공제는 총 급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요."
+    ]
+  },
+  {
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "name": "Charlie - Deep, Confident, Energetic",
+    "labels": {
+      "gender": "male",
+      "accent": "australian",
+      "language": "en",
+      "age": "young",
+      "descriptive": "hyped",
+      "use_case": "conversational"
+    },
+    "stt": 0.926,
+    "stt_min": 0.851,
+    "chars_per_sec": 7.16,
+    "stt2": 1.0,
+    "stt2_min": 1.0,
+    "misses": []
+  },
+  {
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "name": "George - Warm, Captivating Storyteller",
+    "labels": {
+      "gender": "male",
+      "accent": "british",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "mature",
+      "use_case": "narrative_story"
+    },
+    "stt": 0.926,
+    "stt_min": 0.851,
+    "chars_per_sec": 7.73,
+    "stt2": 1.0,
+    "stt2_min": 1.0,
+    "misses": []
+  },
+  {
+    "voice_id": "N2lVS1w4EtoT3dr4eOWO",
+    "name": "Callum - Husky Trickster",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "middle_aged",
+      "use_case": "characters_animation"
+    },
+    "stt": 0.896,
+    "stt_min": 0.792,
+    "chars_per_sec": 6.68,
+    "stt2": 0.972,
+    "stt2_min": 0.943,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아져",
+      "연말정산에서 신용카드 공제는 총급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아져"
+    ]
+  },
+  {
+    "voice_id": "SAz9YHcvj6GT2YYXdXww",
+    "name": "River - Relaxed, Neutral, Informative",
+    "labels": {
+      "gender": "neutral",
+      "accent": "american",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "calm",
+      "use_case": "conversational"
+    },
+    "stt": 0.901,
+    "stt_min": 0.812,
+    "chars_per_sec": 8.01,
+    "stt2": 0.979,
+    "stt2_min": 0.962,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요.",
+      "연말정산에서 신용카드 공제는 총 급여의 이십오 퍼센트를 넘게 쓴 금액부터 적용되어, 체크카드는 공제율이 삼십 퍼센트로 더 높아요."
+    ]
+  },
+  {
+    "voice_id": "SOYHLrjzK2X1ezoPC6cr",
+    "name": "Harry - Fierce Warrior",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "young",
+      "descriptive": "rough",
+      "use_case": "characters_animation"
+    },
+    "stt": 0.906,
+    "stt_min": 0.812,
+    "chars_per_sec": 7.43,
+    "stt2": 0.981,
+    "stt2_min": 0.962,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요.",
+      "연말정산에서 신용카드 공제는 총 급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요."
+    ]
+  },
+  {
+    "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+    "name": "Liam - Energetic, Social Media Creator",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "young",
+      "descriptive": "confident",
+      "use_case": "social_media"
+    },
+    "stt": 0.926,
+    "stt_min": 0.851,
+    "chars_per_sec": 7.67,
+    "stt2": 1.0,
+    "stt2_min": 1.0,
+    "misses": []
+  },
+  {
+    "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+    "name": "Alice - Clear, Engaging Educator",
+    "labels": {
+      "gender": "female",
+      "accent": "british",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+    },
+    "stt": 0.926,
+    "stt_min": 0.851,
+    "chars_per_sec": 6.5,
+    "stt2": 1.0,
+    "stt2_min": 1.0,
+    "misses": []
+  },
+  {
+    "voice_id": "XrExE9yKIg1WjnnlVkGX",
+    "name": "Matilda - Knowledgable, Professional",
+    "labels": {
+      "gender": "female",
+      "accent": "american",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "upbeat",
+      "use_case": "informative_educational"
+    },
+    "stt": 0.906,
+    "stt_min": 0.812,
+    "chars_per_sec": 7.38,
+    "stt2": 0.981,
+    "stt2_min": 0.962,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총 급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요.",
+      "연말정산에서 신용카드 공제는 총 급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요."
+    ]
+  },
+  {
+    "voice_id": "bIHbv24MWmeRgasZH58o",
+    "name": "Will - Relaxed Optimist",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "young",
+      "descriptive": "chill",
+      "use_case": "conversational"
+    },
+    "stt": 0.906,
+    "stt_min": 0.812,
+    "chars_per_sec": 7.63,
+    "stt2": 0.993,
+    "stt2_min": 0.972,
+    "misses": []
+  },
+  {
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "name": "Jessica - Playful, Bright, Warm",
+    "labels": {
+      "gender": "female",
+      "accent": "american",
+      "language": "en",
+      "age": "young",
+      "descriptive": "cute",
+      "use_case": "conversational"
+    },
+    "stt": 0.906,
+    "stt_min": 0.812,
+    "chars_per_sec": 8.28,
+    "stt2": 0.991,
+    "stt2_min": 0.962,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요."
+    ]
+  },
+  {
+    "voice_id": "cjVigY5qzO86Huf0OWal",
+    "name": "Eric - Smooth, Trustworthy",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "classy",
+      "use_case": "conversational"
+    },
+    "stt": 0.906,
+    "stt_min": 0.812,
+    "chars_per_sec": 7.81,
+    "stt2": 0.981,
+    "stt2_min": 0.962,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총 급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요.",
+      "연말정산에서 신용카드 공제는 총 급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요."
+    ]
+  },
+  {
+    "voice_id": "hpp4J3VqNfWAUOO0d1Us",
+    "name": "Bella - Professional, Bright, Warm",
+    "labels": {
+      "gender": "female",
+      "accent": "american",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+    },
+    "stt": 1.0,
+    "stt_min": 1.0,
+    "chars_per_sec": 7.14,
+    "stt2": 0.981,
+    "stt2_min": 0.962,
+    "misses": [
+      "연말정산에서 신용카드 공제는 총 급여의 25%를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 30%로 더 높아요.",
+      "연말정산에서 신용카드 공제는 총 급여의 이십오 퍼센트를 넘게 쓴 금액부터 적용되어 체크카드는 공제율이 삼십 퍼센트로 더 높아요."
+    ]
+  },
+  {
+    "voice_id": "iP95p4xoKVk53GoZ742B",
+    "name": "Chris - Charming, Down-to-Earth",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "casual",
+      "use_case": "conversational"
+    },
+    "stt": 0.926,
+    "stt_min": 0.851,
+    "chars_per_sec": 7.36,
+    "stt2": 1.0,
+    "stt2_min": 1.0,
+    "misses": []
+  },
+  {
+    "voice_id": "nPczCjzI2devNBz1zQrb",
+    "name": "Brian - Deep, Resonant and Comforting",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "classy",
+      "use_case": "social_media"
+    },
+    "stt": 0.926,
+    "stt_min": 0.851,
+    "chars_per_sec": 6.92,
+    "stt2": 1.0,
+    "stt2_min": 1.0,
+    "misses": []
+  },
+  {
+    "voice_id": "onwK4e9ZLuTAKqWW03F9",
+    "name": "Daniel - Steady Broadcaster",
+    "labels": {
+      "gender": "male",
+      "accent": "british",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "formal",
+      "use_case": "informative_educational"
+    },
+    "stt": 0.92,
+    "stt_min": 0.851,
+    "chars_per_sec": 6.25,
+    "stt2": 0.995,
+    "stt2_min": 0.989,
+    "misses": []
+  },
+  {
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "name": "Lily - Velvety Actress",
+    "labels": {
+      "gender": "female",
+      "accent": "british",
+      "language": "en",
+      "age": "middle_aged",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+    },
+    "stt": 0.926,
+    "stt_min": 0.851,
+    "chars_per_sec": 7.57,
+    "stt2": 1.0,
+    "stt2_min": 1.0,
+    "misses": []
+  },
+  {
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "name": "Adam - Dominant, Firm",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "middle_aged",
+      "use_case": "social_media"
+    },
+    "stt": 0.926,
+    "stt_min": 0.851,
+    "chars_per_sec": 7.32,
+    "stt2": 1.0,
+    "stt2_min": 1.0,
+    "misses": []
+  },
+  {
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "name": "Bill - Wise, Mature, Balanced",
+    "labels": {
+      "gender": "male",
+      "accent": "american",
+      "language": "en",
+      "age": "old",
+      "descriptive": "crisp",
+      "use_case": "advertisement"
+    },
+    "stt": 0.926,
+    "stt_min": 0.851,
+    "chars_per_sec": 6.43,
+    "stt2": 0.993,
+    "stt2_min": 0.972,
+    "misses": []
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "marker_mono": {
+    "label": "흑백 마커 라인아트 (기본)",
+    "prompt": "Whiteboard explainer illustration drawn with a black marker. Pure black line art on a pure white background. Bold uniform outlines of equal thickness, simple flat shapes, minimal detail, hand-drawn feel. No shading, no gradients, no gray tones, no color, no texture, no shadows, no frame or border. Absolutely no text, letters, numbers or logos anywhere. Centered composition with generous white space around the subject.",
+    "postprocess": { "grayscale": true, "white_threshold": 235 }
+  },
+  "marker_accent": {
+    "label": "흑백 라인 + 포인트 컬러 1색",
+    "prompt": "Whiteboard explainer illustration drawn with a black marker. Black line art on a pure white background with a single accent color, warm orange (#F08C00), used only as flat fill for one or two key objects. Bold uniform outlines of equal thickness, simple flat shapes, minimal detail. No shading, no gradients, no other colors, no texture, no shadows, no frame. Absolutely no text, letters, numbers or logos anywhere. Centered composition with generous white space.",
+    "postprocess": { "grayscale": false, "white_threshold": 235 }
+  },
+  "marker_mono_v1": {
+    "label": "개선 전 기준선 (구성안의 style_prompt 한 줄, 반복 요소·후처리 없음)",
+    "prompt": "Black and white whiteboard line art",
+    "use_motif": false,
+    "postprocess": { "grayscale": false, "white_threshold": 0 }
+  }
+}

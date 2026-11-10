@@ -1,0 +1,26 @@
+[project]
+name = "whiteboard-shorts"
+version = "0.1.0"
+description = "AI 화이트보드 숏폼 자동 생성 파이프라인 (FastAPI + Python AI Pipeline + whiteboard-animator + Remotion)"
+requires-python = ">=3.11"
+dependencies = ["whiteboard-shorts-pipeline", "whiteboard-shorts-backend"]
+
+[project.optional-dependencies]
+# STEP 06 드로잉 엔진: uv sync --extra animator
+animator = ["whiteboard-shorts-pipeline[animator]"]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["pipeline", "backend"]
+
+[tool.uv.sources]
+whiteboard-shorts-pipeline = { workspace = true }
+whiteboard-shorts-backend = { workspace = true }
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["pipeline/tests"]

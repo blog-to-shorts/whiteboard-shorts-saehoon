@@ -1,0 +1,21 @@
+{
+  "description": "평가용 샘플 콘텐츠 15건. 화이트보드 설명 영상에 맞는 정보형 글 위주로, 분야·글 길이·숫자 밀도가 서로 다르게 골랐다. 선정 기준은 docs/01_pipeline_design.md §4. 원문은 저작권 때문에 저장소에 넣지 않고 'wbs-eval fetch'로 받아 eval/samples/<id>.json 에 둔다.",
+  "selected_at": "2026-11-11",
+  "samples": [
+    {"id": "econ-rate",     "category": "경제",      "trait": "개념 설명 + 숫자",   "url": "https://blog.naver.com/memori94/224460501200"},
+    {"id": "econ-fomc",     "category": "경제",      "trait": "용어 해설·인과",     "url": "https://blog.naver.com/ckddnr9162/224467705844"},
+    {"id": "fin-isa",       "category": "재테크",    "trait": "장단점 비교",        "url": "https://blog.naver.com/big_green_bean/224460671816"},
+    {"id": "tax-yearend",   "category": "세금",      "trait": "항목 나열·숫자 많음", "url": "https://blog.naver.com/ultimately-/224468543912"},
+    {"id": "health-knee",   "category": "건강",      "trait": "원인→대처 흐름",     "url": "https://blog.naver.com/teumday/224464216220"},
+    {"id": "it-python",     "category": "IT·교육",   "trait": "단계별 로드맵",      "url": "https://blog.naver.com/kgdeco/224468637580"},
+    {"id": "sci-photo",     "category": "과학",      "trait": "과정·도식 설명",     "url": "https://blog.naver.com/tg_alligator/224428684613"},
+    {"id": "parent-sleep",  "category": "육아",      "trait": "방법·팁",            "url": "https://blog.naver.com/bluesea_1222/224465321945"},
+    {"id": "cook-kimchi",   "category": "요리",      "trait": "순서가 있는 레시피",  "url": "https://blog.naver.com/kang66711/224458266913"},
+    {"id": "law-jeonse",    "category": "법률·생활", "trait": "체크리스트",         "url": "https://blog.naver.com/seoa125/224454630327"},
+    {"id": "law-jeonse2",   "category": "법률·생활", "trait": "체크리스트 + 계산식", "url": "https://blog.naver.com/didl158/224457942982"},
+    {"id": "pet-sep",       "category": "반려동물",  "trait": "훈련 단계",          "url": "https://blog.naver.com/okvlog/224465335667"},
+    {"id": "self-pomo",     "category": "자기계발",  "trait": "방법 소개",          "url": "https://blog.naver.com/bhsoft6220/224464511345"},
+    {"id": "travel-jeju",   "category": "여행",      "trait": "일정·장소 나열",     "url": "https://blog.naver.com/ssoyeon_yoon/224467021255"},
+    {"id": "review-cafe",   "category": "방문 후기", "trait": "개인 경험·의견",     "url": "https://blog.naver.com/jjhouse2858/224465067150"}
+  ]
+}

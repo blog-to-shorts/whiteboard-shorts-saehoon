@@ -1,0 +1,23 @@
+{
+  "name": "whiteboard-shorts-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "시연용 웹 UI: URL 입력 → 진행 상태 → 영상 미리보기·다운로드 → 대본 확인·수정·재생성 → 품질·평가 결과",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.3",
+    "typescript": "5.6.3",
+    "vite": "5.4.10"
+  }
+}

@@ -30,6 +30,15 @@ def test_check_script_flags_long_and_ungrounded():
     assert {"hook_long", "scene_count", "narr_len", "source_not_found", "total_len"} <= codes
 
 
+def test_check_script_flags_text_in_image_prompt():
+    bad = [_scene() for _ in range(5)]
+    bad[1]["image_prompt"] = "a house key icon, document labeled '등기부등본'"
+    bad[2]["image_prompt"] = "two ID cards with the word owner"
+    codes = [(p["code"], p["scene"]) for p in check_script("초보 러너 코스", bad, SRC)]
+    assert ("image_prompt_text", 2) in codes and ("image_prompt_text", 3) in codes
+    assert ("image_prompt_text", 1) not in codes  # 'a runner on a flat riverside path' 는 통과
+
+
 def test_source_match_ignores_whitespace_and_scores_partial():
     norm = SRC.replace(" ", "")
     assert source_match("왕복 10km  평지라서", norm) == 1.0

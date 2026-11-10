@@ -7,7 +7,7 @@ export function NewJob({ onCreated }: { onCreated: (id: string) => void }) {
   const [text, setText] = useState("");
   const [title, setTitle] = useState("");
   const [opts, setOpts] = useState<JobOptions>({
-    llm: "exaone",
+    llm: "openai",
     image: "openai",
     tts: "elevenlabs",
     prompt_version: "v2",
@@ -79,8 +79,8 @@ export function NewJob({ onCreated }: { onCreated: (id: string) => void }) {
           <label>
             대본 AI
             <select value={opts.llm} onChange={(e) => set("llm", e.target.value as JobOptions["llm"])}>
-              <option value="exaone">EXAONE (기본)</option>
-              <option value="openai">OpenAI</option>
+              <option value="openai">OpenAI (기본)</option>
+              <option value="exaone">EXAONE</option>
             </select>
           </label>
           <label>
@@ -135,7 +135,7 @@ export function NewJob({ onCreated }: { onCreated: (id: string) => void }) {
       <button className="primary" disabled={!canSubmit || busy}>
         {busy ? "요청 중…" : "영상 만들기"}
       </button>
-      <p className="hint">EXAONE 대본은 1편에 수 분 걸려요. 요청하면 작업 화면에서 STEP 01~08 진행 상황을 볼 수 있어요.</p>
+      <p className="hint">요청하면 작업 화면에서 STEP 01~08 진행 상황을 볼 수 있어요. (EXAONE 대본은 1편에 수 분 걸려요.)</p>
     </form>
   );
 }

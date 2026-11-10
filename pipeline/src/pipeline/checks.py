@@ -12,6 +12,10 @@ from dataclasses import dataclass
 CHARS_PER_SEC = 6.1
 SCENE_PAD_SEC = 0.4
 BANNED = re.compile(r"[\U0001F300-\U0001FAFF☀-➿※★☆▶►•|]")
+# 그림 안에 글자를 쓰라는 지시: 이미지 모델은 한글을 정확히 못 그리고, 글자가 들어가면 그림체 일관성이 깨진다
+IMAGE_TEXT = re.compile(
+    r"[가-힣]|\b(label(?:l)?ed|labels?|written|writing|says|saying|reads|text|caption(?:ed)?|titled|words?|letters?)\b"
+    r"|['\"“”‘’]", re.I)
 
 
 @dataclass(frozen=True)
@@ -90,6 +94,9 @@ def check_script(hook: str, scenes: list[dict], source_text: str, limits: Limits
             add("caption_long", i, f"장면 {i}: caption {clen(s['caption'])}자 > {limits.caption_max}자")
         if not s.get("image_prompt"):
             add("image_prompt_missing", i, f"장면 {i}: image_prompt 없음")
+        elif IMAGE_TEXT.search(str(s["image_prompt"])):
+            add("image_prompt_text", i, f"장면 {i}: image_prompt 에 그림 속 글자 지시(한글·labeled·따옴표 등)가 있음 — "
+                                        "글자 없이 사물·행동·화살표로만 표현할 것")
         for k in ("caption", "narration"):
             if BANNED.search(str(s.get(k) or "")):
                 add("banned_char", i, f"장면 {i}: {k} 에 이모지·특수기호")

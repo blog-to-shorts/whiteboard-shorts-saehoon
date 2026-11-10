@@ -1,6 +1,6 @@
 """LLM 어댑터. EXAONE·OpenAI 모두 OpenAI 호환 Chat Completions 라서 클래스 하나로 처리한다.
 
-LLM_PROVIDER=exaone | openai 로 바꾼다. 호출마다 토큰 사용량을 모아 비용 측정에 쓴다.
+LLM_PROVIDER=openai(기본) | exaone 로 바꾼다. 호출마다 토큰 사용량을 모아 비용 측정에 쓴다.
 """
 
 from __future__ import annotations
@@ -57,7 +57,7 @@ class Usage:
 
 class LLM:
     def __init__(self, provider: str | None = None):
-        self.provider = (provider or env("LLM_PROVIDER", "exaone")).lower()
+        self.provider = (provider or env("LLM_PROVIDER", "openai")).lower()
         if self.provider == "exaone":
             self.base_url = env("EXAONE_BASE_URL", "https://api.exaone.ai/v1")
             self.api_key = env("EXAONE_API_KEY")

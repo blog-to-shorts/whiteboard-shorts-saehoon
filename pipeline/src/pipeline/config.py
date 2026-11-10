@@ -34,7 +34,7 @@ def env(name: str, default: str = "") -> str:
 
 @dataclass
 class Settings:
-    llm_provider: str = field(default_factory=lambda: env("LLM_PROVIDER", "exaone"))
+    llm_provider: str = field(default_factory=lambda: env("LLM_PROVIDER", "openai"))
     image_provider: str = field(default_factory=lambda: env("IMAGE_PROVIDER", "openai"))
     tts_provider: str = field(default_factory=lambda: env("TTS_PROVIDER", "edge"))
     animator: str = field(default_factory=lambda: env("ANIMATOR", "whiteboard"))  # whiteboard | simple

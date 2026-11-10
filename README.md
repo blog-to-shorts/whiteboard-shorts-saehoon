@@ -129,7 +129,8 @@ uv run wbs-eval jobs --job <id> --job <id2>        # 길이·자막 싱크·생�
 
 ## 알려진 한계·주의
 
-- **EXAONE 응답 시간**: `reasoning_effort=low` 에서도 추론 토큰이 많아 대본 1편(분석+생성+수정)에 수 분이 걸린다. 빠르게 하려면 `LLM_PROVIDER=openai`.
+- **대본 AI 기본값은 OpenAI `gpt-4.1-mini`** (대본 1편 약 15초·$0.006). EXAONE 은 `LLM_PROVIDER=exaone` 또는 `--llm exaone` —
+  `reasoning_effort=low` 에서도 추론 토큰이 많아 대본 1편에 수 분이 걸리고 하루 100회 호출 제한이 있다.
 - **EXAONE 호출 한도**: 초당 1회. LLM 어댑터가 프로세스 안에서 호출 간격을 1.2초로 맞춘다.
 - **EXAONE 비용**: 공개 단가가 없어 비용은 '미확인'으로 기록된다(토큰 수는 기록).
 - **이미지 속 글자**: 이미지 모델은 한글을 정확히 그리지 못해 스타일 프리셋에서 글자를 금지하고, 글자는 Remotion 자막·키워드로 넣는다.

@@ -44,12 +44,14 @@
 
 | 구분 | 기본값 | 대체 | 전환 |
 |---|---|---|---|
-| 대본·분석 LLM | EXAONE (`k-exaone_v2.5`) | OpenAI (`gpt-4.1-mini`) | `LLM_PROVIDER` |
+| 대본·분석 LLM | OpenAI (`gpt-4.1-mini`) | EXAONE (`k-exaone_v2.5`) | `LLM_PROVIDER` |
 | 이미지 | OpenAI Image (`gpt-image-1`, 1024×1536) | placeholder (개발용) | `IMAGE_PROVIDER` |
 | TTS | Edge 신경망 음성 (무료) | ElevenLabs | `TTS_PROVIDER` |
 | 드로잉 | whiteboard-animator | 단순 스윕 공개(대체 방식) | `ANIMATOR` |
 
-구성안은 대본·이미지 모두 OpenAI, TTS 는 ElevenLabs 를 명시한다. 현재 환경에 있는 키(EXAONE)로 바로 돌 수 있게 기본값을 정하고, 키를 넣으면 구성안 그대로 동작하도록 어댑터로 분리했다. 모델 비교 자체도 5단계 평가 대상이 된다.
+구성안은 대본·이미지 모두 OpenAI, TTS 는 ElevenLabs 를 명시한다. 처음에는 키가 있던 EXAONE 을 기본으로 했다가,
+1차 평가에서 EXAONE 이 대본 1편에 수 분·하루 100회 호출 제한이 있음을 확인하고 기본을 OpenAI 로 바꿨다(대본 1편 약 15초·$0.006).
+EXAONE 은 `LLM_PROVIDER=exaone` 로 그대로 쓸 수 있고, 모델 비교 자체도 5단계 평가 대상이 된다.
 
 ## 3. 평가 기준
 
@@ -63,6 +65,7 @@
 | 구조 | 구조 통과 | 필수 필드(hook·caption·narration·image_prompt) 존재, 장면 수 범위 | 통과 |
 | 구조 | 구조 점수 | LLM 심사: 도입(문제 제시)→전개(원문 순서)→결론(추천 대상) | ≥4 / 5 |
 | 정확성 | 근거 확인 장면 비율 | 장면 `source` 와 원문의 최장 공통 구간 비율 ≥0.6 | ≥90% |
+| 장면 적합성 | 그림 속 글자 지시 | image_prompt 에 한글·labeled·따옴표 등 그림 안 글자 지시가 있으면 위반 | 0건 |
 | 정확성 | 정확성 점수 | LLM 심사: 숫자·이름·순서·인과가 원문과 일치, 지어낸 정보 없음 | ≥4 / 5 |
 | 정확성 | 왜곡 지적 수 | LLM 심사의 distortions 개수 | 0건 |
 | 포괄성 | 핵심 포함 점수 | LLM 심사: 원문 핵심 누락 여부 | ≥4 / 5 |

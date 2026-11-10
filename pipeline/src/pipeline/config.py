@@ -28,8 +28,31 @@ def _load_dotenv(path: Path) -> None:
 _load_dotenv(PROJECT_ROOT / ".env")
 
 
+def _windows_user_env(name: str) -> str:
+    """Windows: setx 로 등록한 사용자 환경변수는 이미 실행 중인 프로그램(IDE·앱이 띄운 서버)에는 전달되지 않는다.
+    프로세스 환경에 없으면 레지스트리(HKCU\\Environment)에서 직접 읽는다."""
+    if os.name != "nt":
+        return ""
+    try:
+        import winreg
+
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Environment") as k:
+            value, _ = winreg.QueryValueEx(k, name)
+            return str(value or "")
+    except OSError:
+        return ""
+
+
 def env(name: str, default: str = "") -> str:
-    return os.environ.get(name, "") or default
+    return os.environ.get(name, "") or _windows_user_env(name) or default
+
+
+KEY_NAMES = ["OPENAI_API_KEY", "EXAONE_API_KEY", "ELEVENLABS_API_KEY", "ELEVENLABS_VOICE_ID"]
+
+
+def key_status() -> dict[str, bool]:
+    """키가 설정됐는지만 알려준다(값은 절대 돌려주지 않음)."""
+    return {k: bool(env(k)) for k in KEY_NAMES}
 
 
 @dataclass

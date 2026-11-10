@@ -12,6 +12,14 @@ export function App() {
   const [jobs, setJobs] = useState<JobStatus[]>([]);
   const [selected, setSelected] = useState<string | null>(null);
   const [apiDown, setApiDown] = useState(false);
+  const [missingKeys, setMissingKeys] = useState<string[]>([]);
+
+  useEffect(() => {
+    api
+      .health()
+      .then((h) => setMissingKeys(Object.entries(h.keys ?? {}).filter(([, ok]) => !ok).map(([k]) => k)))
+      .catch(() => {});
+  }, []);
 
   const refresh = useCallback(async () => {
     try {
@@ -58,6 +66,13 @@ export function App() {
       {apiDown && (
         <div className="banner err">
           API 서버에 연결할 수 없어요. <code>uv run uvicorn app.main:app --app-dir backend --port 8000</code> 로 백엔드를 켜 주세요.
+        </div>
+      )}
+
+      {!apiDown && missingKeys.length > 0 && (
+        <div className="banner err">
+          서버가 찾지 못한 키: <b>{missingKeys.join(", ")}</b> — 해당 기능(OpenAI 대본·그림 / EXAONE / ElevenLabs 목소리)을 쓰면
+          실패해요. 사용자 환경변수(setx)나 <code>.env</code> 에 등록하세요. 등록 후 서버 재시작은 필요 없어요.
         </div>
       )}
 

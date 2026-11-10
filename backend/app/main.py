@@ -11,7 +11,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from pipeline.config import PROJECT_ROOT
+from pipeline.config import PROJECT_ROOT, key_status
 
 from .routers import evaluation, jobs
 
@@ -26,7 +26,7 @@ app.include_router(evaluation.router)
 
 @app.get("/api/health")
 def health():
-    return {"ok": True}
+    return {"ok": True, "keys": key_status()}  # 설정 여부만, 값은 내보내지 않음
 
 
 _dist = PROJECT_ROOT / "frontend" / "dist"

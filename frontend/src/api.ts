@@ -96,6 +96,7 @@ const json = (body: unknown): RequestInit => ({
 });
 
 export const api = {
+  health: () => req<{ ok: boolean; keys: Record<string, boolean> }>("/api/health"),
   listJobs: () => req<JobStatus[]>("/api/jobs?limit=40"),
   getJob: (id: string) => req<JobStatus>(`/api/jobs/${id}`),
   createJob: (body: { url?: string; text?: string; title?: string; options: JobOptions }) =>

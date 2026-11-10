@@ -10,6 +10,7 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import FileResponse, PlainTextResponse
 
 from ..models import CreateJob, JobStatus, RerunJob
+from ..security import check_daily_quota
 from ..services import job_runner
 
 router = APIRouter(prefix="/api/jobs", tags=["jobs"])
@@ -52,6 +53,7 @@ def _status(job_id: str) -> JobStatus:
 
 @router.post("", response_model=JobStatus, status_code=202)
 def create_job(req: CreateJob):
+    check_daily_quota()
     return _status(job_runner.submit(req))
 
 
@@ -137,5 +139,7 @@ def rerun_job(job_id: str, req: RerunJob):
     _dir(job_id)
     if (job_runner.read_status(job_id) or {}).get("state") in ("running", "queued"):
         raise HTTPException(409, "이미 실행 중인 작업입니다")
+    if req.from_step < 8:  # 합성만 다시 하는 경우(STEP 08)는 API 비용이 없어 한도에서 뺀다
+        check_daily_quota()
     job_runner.rerun(job_id, req)
     return _status(job_id)

@@ -26,6 +26,18 @@ uv run uvicorn app.main:app --app-dir backend --port 8000
 http://localhost:8000 — URL 입력 → STEP 01~08 진행 상황 → 영상 미리보기·다운로드 → 장면별 대본 수정 후 부분 재생성 → 품질 지표 · 개선 전·후 평가표. 자세한 화면 구성은 [frontend/README.md](frontend/README.md).
 API 키(`EXAONE_API_KEY`, `OPENAI_API_KEY`, `ELEVENLABS_API_KEY`·`ELEVENLABS_VOICE_ID`)는 서버를 켜는 터미널의 환경변수나 `.env` 에 있어야 한다.
 
+### 다른 사람에게 공유 (외부 접속 주소)
+
+```powershell
+.\scripts\share.ps1          # 웹 서버 + Cloudflare 무료 터널을 백그라운드로 켜고 https://….trycloudflare.com 주소 출력
+.\scripts\share.ps1 -Stop    # 끄기
+```
+
+- `.env` 의 `DEMO_PASSWORD` 가 있으면 접속할 때 로그인 창이 뜬다(아이디 `demo`). 비밀번호를 아는 사람만 영상을 만들 수 있다.
+- `DEMO_MAX_JOBS_PER_DAY`(기본 20)로 하루 생성·재생성 수를 막아 API 비용이 무한정 늘지 않게 한다. 키워드만 고친 재합성은 비용이 없어 세지 않는다.
+- 이 PC 와 서버가 켜져 있는 동안만 접속된다. 터널을 다시 켜면 주소가 바뀐다(최근 주소: `jobs/_share/url.txt`).
+- 필요: `winget install --id Cloudflare.cloudflared -e`
+
 ## 가이드라인 단계별 산출물
 
 | 단계 | 항목 | 구현 위치 | 실행 | 상태 |
